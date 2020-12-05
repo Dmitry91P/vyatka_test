@@ -36,17 +36,43 @@ h1{
     width: 60px;
     height: 90px;
 }
-.variants{
-    margin: 0 auto;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.grid{
+    margin: 30px 0px;
+    display: grid;
+    grid-template-rows: 500px 500px;
+    grid-template-columns: 300px 300px;
+    justify-content: space-around;
+    grid-gap: 80px;
+    text-align: justify;
+}
+
+h3 {
+    text-align: center;
 }
 .picture > img {
     width: 300px;
     height: 300px;
     border: 2px solid black;
     border-radius: 50%;
+}
+h4, h2{
+    margin: 0;
+    font-size: 30px;
+}
+.subtitle > p{
+    margin-top: 10px;
+}
+.box {
+    width: 100%;
+    overflow: hidden; 
+    white-space: nowrap;
+}
+.row {
+    display: inline-block;
+    padding-right: 20px;
+}
+.row > img {
+    height: 200px;
+    width: 330px;
+    border: 2px solid black;
 }

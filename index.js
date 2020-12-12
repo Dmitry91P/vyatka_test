@@ -32,4 +32,24 @@ function left (){
    
 })
 }
- 
+arr.forEach(el => el.addEventListener("click", function(){
+  create_shadow(document.querySelector("body"), "shadow_window");
+  create_shadow(document.querySelector(".shadow_window"),"place");
+  create_shadow(document.querySelector(".place"),"place_text");
+  create_shadow(document.querySelector(".place"),"place_img");
+  create_shadow(document.querySelector(".place"),"close");
+  add_place(el.id);
+  document.querySelector(".shadow_window").style.display = "flex";
+})) 
+function create_shadow(parent, param){
+   new_tag = document.createElement("div");
+   new_tag.classList.add(param)
+   parent.prepend(new_tag)
+   if(param == "close"){
+     new_tag.innerHTML = "&#10006;"
+   }
+  }
+  function add_place(id_place){
+    document.querySelector(".place_img").style.backgroundImage = places_img[id_place];
+    document.querySelector(".place_text").innerHTML = places[id_place]
+  }

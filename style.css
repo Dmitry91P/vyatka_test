@@ -12,9 +12,12 @@
 }
 
 body{
-    margin: 0 auto;
+    margin: 0;
+    font-family: 'Oswald';
+}
+header, section, footer {
     max-width: 70%;
-    font-family: 'Oswald' ;
+    margin: 0 auto;
 }
 header{
     display: flex;
@@ -75,6 +78,7 @@ h4, h2{
     text-align: center;
     position: relative;
     left: -350px;
+    cursor: pointer;
 }
 
 .row > img {
@@ -95,7 +99,7 @@ h4, h2{
     text-shadow: -2px 0 rgb(83, 83, 83), 0 2px rgb(83, 83, 83), 2px 0 rgb(83, 83, 83), 0 -2px rgb(83, 83, 83);
 }
 .slide_right{
-    animation: slide_right 2s ease-in-out ; 
+    animation: slide_right 2s ease-in ; 
     animation-fill-mode: forwards;
 }
 @keyframes slide_right {
@@ -107,7 +111,7 @@ h4, h2{
     }
 }
 .slide_left{
-      animation: slide_left 2s ease-in-out ; 
+      animation: slide_left 2s ease-in ; 
       animation-fill-mode: forwards;
     
 }
@@ -121,4 +125,14 @@ h4, h2{
 }
 .first_left{
     transform: translateX(-350px);
+}
+.shadow_window {
+    background: #434344;
+    opacity: 0.7;
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    display: none;
 }

@@ -28,8 +28,11 @@ header{
     background-image: url(image/head_2.jpg);
     background-repeat: no-repeat;
     background-position: left center;
+    background-size: cover;
     color: #f2f3f4;
+    
 }
+
 h1{
     margin: 20px;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
@@ -58,7 +61,7 @@ h3 {
     border: 2px solid black;
     border-radius: 50%;
 }
-h4, h2{
+h4, h2, h5{
     margin: 0;
     font-size: 30px;
 }
@@ -127,12 +130,77 @@ h4, h2{
     transform: translateX(-350px);
 }
 .shadow_window {
-    background: #434344;
-    opacity: 0.7;
     z-index: 2;
     position: fixed;
     width: 100%;
     height: 100%;
     margin: 0;
     display: none;
+}
+.shadow{
+    background: #434344;
+    opacity: 0.7;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.place {
+   height: 90%;
+   width: 90%;
+   margin:  2% 5%;
+   background: black;
+   position: absolute;
+   background: white;
+   display: grid;
+   grid-template-columns: 80% 18% 2%;
+   grid-template-areas: "img text close" ;
+   border: 2px solid black;
+}
+.place_text{
+   border-left: 1px solid black;
+   color: black;
+   grid-area: text;
+   text-align: justify;
+   padding-left: 5px;
+   padding-top: 10px;
+   
+}
+.place_img{
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    grid-area: img;
+}
+.close{
+   color: black;
+   cursor: pointer;
+   grid-area: close;
+   justify-self: center;
+}
+.photo {
+    height: 400px;
+    animation: fade 8s linear infinite;
+    animation-delay: 4s;
+    background-image: url(image/head_1.jpg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    color: #f2f3f4;
+    border: 5px solid black;
+}
+@keyframes fade {
+    0% { opacity: 1 }
+    25% { opacity: 0.5;}
+    50% { opacity: 0 }
+    75% { opacity: 0.5}
+    100% { opacity: 1 }
+  }
+  
+  footer > p{
+      padding: 20px 0px;
+      float: left;
+ }
+  footer > span {
+      padding: 20px 0px;
+      float: right;
 }

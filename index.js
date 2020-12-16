@@ -35,11 +35,15 @@ function left (){
 arr.forEach(el => el.addEventListener("click", function(){
   create_shadow(document.querySelector("body"), "shadow_window");
   create_shadow(document.querySelector(".shadow_window"),"place");
+  create_shadow(document.querySelector(".shadow_window"), "shadow");
   create_shadow(document.querySelector(".place"),"place_text");
   create_shadow(document.querySelector(".place"),"place_img");
   create_shadow(document.querySelector(".place"),"close");
   add_place(el.id);
   document.querySelector(".shadow_window").style.display = "flex";
+  document.querySelector(".close").addEventListener("click", function(){
+   document.querySelector(".shadow_window").remove()
+  })
 })) 
 function create_shadow(parent, param){
    new_tag = document.createElement("div");
@@ -52,4 +56,21 @@ function create_shadow(parent, param){
   function add_place(id_place){
     document.querySelector(".place_img").style.backgroundImage = places_img[id_place];
     document.querySelector(".place_text").innerHTML = places[id_place]
+    if( id_place == "pigemsky"){
+      document.querySelector(".place_text").style.overflowY = "scroll"
+    }
   }
+  function slider_header(step = 1){
+  setTimeout(change_header, 8000, step)
+  }
+   function change_header(step){
+   
+  
+  document.querySelector(".photo").style.backgroundImage = head[step];
+   step++ 
+   if(step == 6){
+      step = 0;
+    }
+    
+    slider_header(step)
+   }

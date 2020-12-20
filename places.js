@@ -12,4 +12,15 @@ var places_img = {
     velikorezkoe:"url(image/slider_5.jpg)",
     dendropark:"url(image/slider_1.jpg)"
 }
-var head = ["url(image/head_1.jpg)","url(image/head_3.jpg)","url(image/head_4.jpg)","url(image/head_5.jpg)","url(image/head_6.jpg)","url(image/head_7.jpg)" ]
+var photo = ["url(image/photo_1.jpg)",
+"url(image/photo_2.jpg)",
+"url(image/photo_3.jpg)",
+"url(image/photo_4.jpg)",
+"url(image/photo_5.jpg)",
+"url(image/photo_6.jpg)" ]
+var text_photo = ["Спасская улица, город Киров",
+"Поле, Уржумский район",
+"Соколья гора. Котельничский район",
+"озеро Чваниха.Нолинский район",
+"река Немда.Кировская область",
+"Теремешинское озеро. Тужинский район"]

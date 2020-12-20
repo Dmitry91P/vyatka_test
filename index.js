@@ -61,16 +61,20 @@ function create_shadow(parent, param){
     }
   }
   function slider_header(step = 1){
-  setTimeout(change_header, 8000, step)
+  setTimeout(change_header, 6000, step)
+  setTimeout(remove_photo, 4000)
   }
-   function change_header(step){
    
-  
-  document.querySelector(".photo").style.backgroundImage = head[step];
+  function change_header(step){
+   document.querySelector(".photo").style.backgroundImage = photo[step];
+   document.querySelector("h6").innerHTML = text_photo[step]
    step++ 
    if(step == 6){
       step = 0;
     }
-    
+    setTimeout(remove_photo, 2000)
     slider_header(step)
+  }
+   function remove_photo(){
+    document.querySelector(".photo").classList.toggle("animation_photo")
    }
